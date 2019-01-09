@@ -1,17 +1,17 @@
 {
-  "name": "iso-639-1",
-  "version": "2.0.3",
+  "name": "@kitchenstories/iso-639-1",
+  "version": "2.1.0",
   "description": "ISO-639-1 codes",
   "main": "build/index.js",
-  "module": "src/index.js",
+  "module": "build/index.js",
   "typings": "index.d.ts",
   "scripts": {
-    "build": "webpack",
+    "build": "rollup -c --environment BUILD:production",
     "test": "mocha"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/meikidd/iso-639-1.git"
+    "url": "git+https://github.com/KitchenStories/iso-639-1.git"
   },
   "keywords": [
     "iso",
@@ -22,10 +22,13 @@
     "locale",
     "locale code"
   ],
+  "files": [
+    "build"
+  ],
   "author": "meikidd <meikidd@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/meikidd/iso-639-1/issues"
+    "url": "https://github.com/KitchenStories/iso-639-1/issues"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
