@@ -1,4 +1,13 @@
 # ISO-639-1
+
+---
+
+⚠️ This is a fork of the official [iso-639-1 package](https://npmjs.org/package/iso-639-1).
+
+I needed an untranspiled version without static class properties. If you do need transpiling out of the box or want to use the package directly in the browser, use the original package.
+
+---
+
 [![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
 [![Download Count][download-url]][npm-url]
@@ -9,13 +18,12 @@
 [npm-url]: https://npmjs.org/package/iso-639-1
 [download-url]: https://img.shields.io/npm/dt/iso-639-1.svg?style=flat-square
 
-
 Simple interface for [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) language codes
 
 ## Installation
 
 ```
-npm install iso-639-1
+npm install @ovl/iso-639-1
 ```
 
 ## Usage
@@ -23,76 +31,84 @@ npm install iso-639-1
 ### Node.js
 
 ```
-const ISO6391 = require('iso-639-1')
-console.log(ISO6391.getName('en')) // 'English'
+const ISO6391 = require('@ovl/iso-639-1')
+
+const lang = new ISO6391()
+
+console.log(lang.getName('en')) // 'English'
 ```
 
 ### Browsers
 
-HTML
+Import
 
 ```
-<script type="text/javascript" src="./node_modules/iso-639-1/build/index.js"></script>
-```
+import ISO6391 from '@ovl/iso-639-1'
 
-Visit global variable ISO6391 in js
+const lang = new ISO6391()
 
-```
-console.log(ISO6391.getName('en')) // 'English'
+console.log(lang.getName('en')) // 'English'
 ```
 
 ## Methods
 
 ### getName(code)
-  - @param code {string}
-  - @return {string}
+
+- @param code {string}
+- @return {string}
 
 Lookup language english name by code
 
 ### getAllNames()
-  - @return {array}
+
+- @return {array}
 
 Get array of all language english names
 
 ### getNativeName(code)
-  - @param code {string}
-  - @return {string}
+
+- @param code {string}
+- @return {string}
 
 Lookup language native name by code
 
 ### getAllNativeNames()
-  - @return {array}
+
+- @return {array}
 
 Get array of all language native names
 
-
 ### getCode(name)
-  - @param name {string}
-  - @return {string}
+
+- @param name {string}
+- @return {string}
 
 Lookup code by english name or native name
 
 ### getAllCodes()
-  - @return {array}
+
+- @return {array}
 
 Get array of all codes
 
 ### validate(code)
-  - @param code {string}
-  - @return {boolean}
+
+- @param code {string}
+- @return {boolean}
 
 Check whether the given code is in the list of [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
 
 ### getLanguages(codes)
-  - @param codes {array}
-  - @return {array}
+
+- @param codes {array}
+- @return {array}
 
 Get the array of the language objects by the given codes
 
 ## Usage
 
 ```
-const ISO6391 = require('iso-639-1')
+const ISO6391 = require('@ovl/iso-639-1')
 
 console.log(ISO6391.getName('zh')) // 'Chinese'
 console.log(ISO6391.getNativeName('zh')) // '中文'
