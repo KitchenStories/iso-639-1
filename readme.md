@@ -2,7 +2,7 @@
 
 ---
 
-⚠️ This is a fork of the official [iso-639-1 package](https://npmjs.org/package/iso-639-1).
+⚠️ This is a fork of the original [iso-639-1 package](https://npmjs.org/package/iso-639-1).
 
 I needed an untranspiled version without static class properties. If you do need transpiling out of the box or want to use the package directly in the browser, use the original package.
 
@@ -13,7 +13,7 @@ I needed an untranspiled version without static class properties. If you do need
 
 [travis-image]: https://travis-ci.org/ovlb/iso-639-1.svg?branch=master
 [travis-url]: https://travis-ci.org/ovlb/iso-639-1
-[npm-image]: https://img.shields.io/npm/v/iso-639-1.svg?style=flat-square
+[npm-image]: https://img.shields.io/npm/v/@ovl/iso-639-1.svg?style=flat
 [npm-url]: https://www.npmjs.com/package/@ovl/iso-639-1
 
 Simple interface for [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) language codes
