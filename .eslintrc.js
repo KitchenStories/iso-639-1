@@ -1,8 +1,10 @@
-{
+module.exports = {
   // 基于 airbnb 规则
   "extends": "airbnb",
   // 使用 babel 解析器，支持一些还没有进入 ES6+ 标准的特性。比如 class property
-  "parser": "babel-eslint",
+  parserOptions: {
+    "parser": "babel-eslint",
+  },
   // 解析 webpack alias 中的模块名
   "settings": {
     "import/resolver": "webpack"
@@ -19,10 +21,10 @@
       }
     ],
     "no-param-reassign": [
-      "error", 
-      { 
+      "error",
+      {
         // 允许修改参数的属性
-        "props": false 
+        "props": false
       }
     ],
     // 允许在循环里使用 await
