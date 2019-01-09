@@ -42,7 +42,7 @@
   },
   "homepage": "https://github.com/meikidd/iso-639-1#readme",
   "engines": {
-    "node": ">=6.0"
+    "node": ">=8.0"
   },
   "ava": {
     "require": [
