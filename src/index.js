@@ -4,13 +4,13 @@ export default class ISO6391 {
   getLanguages(codes = []) {
     return codes.map(code => ({
       code,
-      name: ISO6391.getName(code),
-      nativeName: ISO6391.getNativeName(code),
+      name: this.getName(code),
+      nativeName: this.getNativeName(code),
     }));
   }
 
   getName(code) {
-    return ISO6391.validate(code) ? LANGUAGES_LIST[code].name : '';
+    return this.validate(code) ? LANGUAGES_LIST[code].name : '';
   }
 
   getAllNames() {
@@ -18,7 +18,7 @@ export default class ISO6391 {
   }
 
   getNativeName(code) {
-    return ISO6391.validate(code) ? LANGUAGES_LIST[code].nativeName : '';
+    return this.validate(code) ? LANGUAGES_LIST[code].nativeName : '';
   }
 
   getAllNativeNames() {
