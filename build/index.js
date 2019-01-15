@@ -1,4 +1,4 @@
-const LANGUAGES_LIST = {
+const LANGUAGES_LIST$1 = {
   aa: {
     name: 'Afar',
     nativeName: 'Afaraf',
@@ -738,16 +738,19 @@ const LANGUAGES_LIST = {
 };
 
 class ISO6391 {
+  constructor() {
+    this.LANGS = LANGUAGES_LIST$1;
+  }
   getLanguages(codes = []) {
     return codes.map(code => ({
       code,
-      name: ISO6391.getName(code),
-      nativeName: ISO6391.getNativeName(code),
+      name: this.getName(code),
+      nativeName: this.getNativeName(code),
     }));
   }
 
   getName(code) {
-    return ISO6391.validate(code) ? LANGUAGES_LIST[code].name : '';
+    return ISO6391.validate(code) ? this.LANGS[code].name : '';
   }
 
   getAllNames() {
@@ -755,7 +758,7 @@ class ISO6391 {
   }
 
   getNativeName(code) {
-    return ISO6391.validate(code) ? LANGUAGES_LIST[code].nativeName : '';
+    return ISO6391.validate(code) ? this.LANGS[code].nativeName : '';
   }
 
   getAllNativeNames() {
@@ -764,7 +767,7 @@ class ISO6391 {
 
   getCode(name) {
     const code = Object.keys(LANGUAGES_LIST).find(code => {
-      const language = LANGUAGES_LIST[code];
+      const language = this.LANGS[code];
 
       return (
         language.name.toLowerCase() === name.toLowerCase() ||
@@ -778,8 +781,8 @@ class ISO6391 {
     return Object.keys(LANGUAGES_LIST);
   }
 
-  validate(code) {
-    return LANGUAGES_LIST[code] !== undefined;
+  static validate(code) {
+    return this.LANGS[code] !== undefined;
   }
 }
 
