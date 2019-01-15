@@ -1,6 +1,9 @@
-import LANGUAGES_LIST from './data';
+import LANGUAGES_LIST_DATA from './data';
 
 export default class ISO6391 {
+  constructor() {
+    this.LANGS = LANGUAGES_LIST_DATA
+  }
   getLanguages(codes = []) {
     return codes.map(code => ({
       code,
@@ -10,7 +13,7 @@ export default class ISO6391 {
   }
 
   getName(code) {
-    return this.validate(code) ? LANGUAGES_LIST[code].name : '';
+    return ISO6391.validate(code) ? this.LANGS[code].name : '';
   }
 
   getAllNames() {
@@ -18,7 +21,7 @@ export default class ISO6391 {
   }
 
   getNativeName(code) {
-    return this.validate(code) ? LANGUAGES_LIST[code].nativeName : '';
+    return ISO6391.validate(code) ? this.LANGS[code].nativeName : '';
   }
 
   getAllNativeNames() {
@@ -27,7 +30,7 @@ export default class ISO6391 {
 
   getCode(name) {
     const code = Object.keys(LANGUAGES_LIST).find(code => {
-      const language = LANGUAGES_LIST[code];
+      const language = this.LANGS[code];
 
       return (
         language.name.toLowerCase() === name.toLowerCase() ||
@@ -41,7 +44,7 @@ export default class ISO6391 {
     return Object.keys(LANGUAGES_LIST);
   }
 
-  validate(code) {
-    return LANGUAGES_LIST[code] !== undefined;
+  static validate(code) {
+    return this.LANGS[code] !== undefined;
   }
 }
