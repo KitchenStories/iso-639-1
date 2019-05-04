@@ -151,7 +151,7 @@
     },
     el: {
       name: 'Greek',
-      nativeName: 'ελληνικά',
+      nativeName: 'Ελληνικά',
     },
     en: {
       name: 'English',
@@ -543,7 +543,7 @@
     },
     ro: {
       name: 'Romanian',
-      nativeName: 'limba română',
+      nativeName: 'Română',
     },
     ru: {
       name: 'Russian',

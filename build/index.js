@@ -145,7 +145,7 @@ const LANGUAGES_LIST = {
   },
   el: {
     name: 'Greek',
-    nativeName: 'Ελληνικά'
+    nativeName: 'Ελληνικά',
   },
   en: {
     name: 'English',
@@ -537,7 +537,7 @@ const LANGUAGES_LIST = {
   },
   ro: {
     name: 'Romanian',
-    nativeName: 'Română'
+    nativeName: 'Română',
   },
   ru: {
     name: 'Russian',
